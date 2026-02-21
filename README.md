@@ -444,7 +444,7 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-- Built for the Odoo Hackathon 2024
+- Built for the Odoo Hackathon 2026
 - Powered by Supabase
 - Icons by Lucide
 - Charts by Recharts
