@@ -16,6 +16,7 @@ const pageTitles = {
     '/expenses':    'Expenses & Fuel',
     '/drivers':     'Driver Profiles',
     '/analytics':   'Analytics',
+    '/roi':         'ROI Analytics',
 }
 
 export default function TopBar() {

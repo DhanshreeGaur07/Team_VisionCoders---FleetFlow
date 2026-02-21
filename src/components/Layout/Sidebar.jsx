@@ -8,6 +8,7 @@ import {
     Users,
     BarChart3,
     LogOut,
+    Percent,
 } from 'lucide-react'
 import useAuthStore from '../../stores/authStore'
 
@@ -22,14 +23,14 @@ const allNavItems = [
     { label: 'Intelligence', type: 'section' },
     { to: '/drivers', icon: Users, label: 'Driver Profiles' },
     { to: '/analytics', icon: BarChart3, label: 'Analytics' },
+    { to: '/roi', icon: Percent, label: 'ROI Analytics' },
 ]
 
-// Which routes each role can access
 const roleRoutes = {
-    'Fleet Manager': ['/', '/vehicles', '/trips', '/maintenance', '/expenses', '/drivers', '/analytics'],
+    'Fleet Manager': ['/', '/vehicles', '/trips', '/maintenance', '/expenses', '/drivers', '/analytics', '/roi'],
     'Dispatcher': ['/', '/vehicles', '/trips', '/drivers'],
     'Safety Officer': ['/', '/drivers', '/analytics'],
-    'Financial Analyst': ['/', '/expenses', '/maintenance', '/analytics'],
+    'Financial Analyst': ['/', '/expenses', '/maintenance', '/analytics', '/roi'],
 }
 
 function getFilteredNavItems(role) {

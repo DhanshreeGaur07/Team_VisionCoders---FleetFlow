@@ -12,13 +12,13 @@ import MaintenanceLogs from './pages/MaintenanceLogs'
 import ExpenseTracker from './pages/ExpenseTracker'
 import DriverProfiles from './pages/DriverProfiles'
 import Analytics from './pages/Analytics'
+import ROIAnalytics from './pages/ROIAnalytics'
 
-// Role-based route access map
 const roleRoutes = {
-  'Fleet Manager': ['/', '/vehicles', '/trips', '/maintenance', '/expenses', '/drivers', '/analytics'],
+  'Fleet Manager': ['/', '/vehicles', '/trips', '/maintenance', '/expenses', '/drivers', '/analytics', '/roi'],
   'Dispatcher': ['/', '/vehicles', '/trips', '/drivers'],
   'Safety Officer': ['/', '/drivers', '/analytics'],
-  'Financial Analyst': ['/', '/expenses', '/maintenance', '/analytics'],
+  'Financial Analyst': ['/', '/expenses', '/maintenance', '/analytics', '/roi'],
 }
 
 function ProtectedRoute({ children }) {
@@ -260,6 +260,7 @@ function App() {
             <Route path="/expenses" element={<ExpenseTracker />} />
             <Route path="/drivers" element={<DriverProfiles />} />
             <Route path="/analytics" element={<Analytics />} />
+            <Route path="/roi" element={<ROIAnalytics />} />
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
